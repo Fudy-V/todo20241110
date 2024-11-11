@@ -13,7 +13,7 @@ export default function Header(props: Title) {
     <>
       <header className="flex flex-row justify-around py-2 border-b-2 border-gray-500">
         <h1 className="text-2xl font-bold">{props.title}</h1>
-        <Button>
+        <Button asChild>
           <Link href={props.transitionUrl}>{props.buttonText}</Link>
         </Button>
       </header>
