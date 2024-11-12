@@ -1,9 +1,6 @@
-import Header from "@/components/Header/Header";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <>
-      <Header title="TODO LIST" buttonText="登録" />
-    </>
-  );
+  redirect("/todo"); // /todoにリダイレクト
+  return null;
 }
