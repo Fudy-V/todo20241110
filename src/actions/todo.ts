@@ -26,3 +26,17 @@ export async function deleteTodos(id: number) {
     return null;
   }
 }
+export async function createTodos(formData: FormData) {
+  try {
+    // console.log("FormData:", formData); // FormDataの内容を確認
+    const title = formData.get("title") as string;
+    if (!title) {
+      throw new Error("タイトルが空です");
+    }
+    await prisma.todo.create({ data: { title } });
+    revalidatePath("/");
+  } catch (error) {
+    console.error("登録に失敗しました", error);
+    return null;
+  }
+}
