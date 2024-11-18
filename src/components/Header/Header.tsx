@@ -1,5 +1,5 @@
 import React from "react";
-import InputTodo from "../input/InputTodo";
+import InputTodo from "../Input/InputTodo";
 
 type Title = {
   title: string;
