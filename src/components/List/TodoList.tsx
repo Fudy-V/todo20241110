@@ -6,7 +6,7 @@ export const TodoList = async () => {
   const todos = await getTodos();
 
   return (
-    <ul>
+    <ul className="bg-gray-300 min-h-[100vh] my-5 rounded-sm">
       {todos.map((todo) => (
         <li
           key={todo.id}
